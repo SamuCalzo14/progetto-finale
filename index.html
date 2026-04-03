@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studio RC — Fisioterapia</title>
+
+<!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+
+  <!-- FONT AWESOME per le icone -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+  <header>
+    <!-- HEADER 1 -->
+    <div id="header1">
+        <h1>Studio RC</h1>
+
+        <nav>
+            <a href="#sec-studio">Lo studio</a>
+            <a href="#sec-fisio">Il fisioterapista</a>
+            <a href="#sec-prenota">Prenota</a>
+            <a href="#sec-dove">Dove siamo</a>
+            <a href="" class="btn1 btn1-accedi">
+                Accedi <i class="fa-solid fa-circle-user"></i>
+            </a>
+        </nav>
+
+        <button class="hamburger" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </div>
+
+    <!-- MENU MOBILE -->
+    <div class="menu-mobile" id="menu-mobile">
+        <a href="">Accedi <i class="fa-solid fa-circle-user"></i></a>
+        <a href="#sec-studio" onclick="chiudiMenu()">Lo studio <i class="fa-solid fa-building"></i></a>
+        <a href="#sec-fisio" onclick="chiudiMenu()">Fisioterapista <i class="fa-solid fa-user-doctor"></i></a>
+        <a href="#sec-prenota" onclick="chiudiMenu()">Prenota <i class="fa-regular fa-calendar"></i></a>
+        <a href="#sec-dove" onclick="chiudiMenu()">Dove siamo <i class="fa-solid fa-map-pin"></i></a>
+    </div>
+
+    <!-- HEADER 2  -->
+    <div id="header2">
+        <h2>La tua salute,<br>nelle mani giuste.</h2>
+        <p>Prenota una visita fisioterapica in pochi click.</p>
+        <a href="#sec-prenota" class="btn1 btn1-prenota">
+            Prenota ora <i class="fa-regular fa-calendar"></i>
+        </a>
+    </div>
+  </header>
+
+  <main>
+    
+    
+
+  </main>
+
+
+  <script>
+    function toggleMenu() {
+        const menu = document.getElementById("menu-mobile");
+        menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+    }
+    function chiudiMenu() {
+        document.getElementById("menu-mobile").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>
