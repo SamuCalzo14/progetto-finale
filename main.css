@@ -9,21 +9,14 @@ body {
     font-family: Arial;
 }
 
-main{
+/* LARGHEZZA PIENA */
+header, main, footer {
+    width: 100%;
+}
+
+main {
     background-color: #e0e0e0;
 }
-
-.sectionInd{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    background: transparent;
-    border: 3px solid #74b88a;
-    margin-left: 2%;
-    margin-right: 2%;
-    border-radius: 10px;
-}
-
 
 /* H1 */
 h1 {
@@ -35,7 +28,6 @@ h1 {
     font-size: 42px;
     margin-bottom: 15px;
     color: #3e5844;
-    
 }
 
 /* BOTTONI BASE */
@@ -83,15 +75,17 @@ h1 {
     box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
-/* HEADER 1 */
+/* HEADER 1 — fisso in cima, larghezza piena */
 #header1 {
     padding: 20px 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #538969;
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 1000;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
@@ -134,12 +128,24 @@ nav a:hover {
     background-color: #4e7a5f;
 }
 
+/* HEADER — padding top per compensare header1 fisso */
+header {
+    padding-top: 65px;
+}
+
 /* HEADER 2 */
 #header2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    min-height: 100vh;
+    
     text-align: center;
-    padding: 90px 20px;
-    background: linear-gradient(#538969, #a8c3b2, #e0e0e0,#e0e0e0,#f6f6f6);
-    color: white;
+    padding: 40px 20px;
+    
+    background: linear-gradient(#538969, #a8c3b2, #e0e0e0, #f6f6f6);
 }
 
 #header2 p {
@@ -147,7 +153,7 @@ nav a:hover {
     color: #5e8066;
 }
 
-/* MENU MOBILE */
+/* MENU MOBILE — fisso sotto header1 */
 .menu-mobile {
     display: none;
     flex-direction: column;
@@ -155,6 +161,12 @@ nav a:hover {
     padding: 15px 20px;
     gap: 10px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 65px;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    width: 100%;
 }
 
 .menu-mobile a {
@@ -175,15 +187,6 @@ nav a:hover {
     border-color: #74b88a;
 }
 
-.sec-index{
-    background-color: #ffffff;
-    width: 100%;
-}
-
-.sec-h2{
-    
-}
-
 /* ============================
    SECTIONS COMUNI
    ============================ */
@@ -191,6 +194,7 @@ nav a:hover {
 .sec-index {
     padding: 60px 0;
     background-color: #ffffff;
+    width: 100%;
 }
 
 .sec-alt {
@@ -216,7 +220,6 @@ nav a:hover {
     margin-bottom: 35px;
     max-width: 680px;
 }
-
 
 /* ============================
    STUDIO — GALLERY
@@ -248,7 +251,6 @@ nav a:hover {
     font-size: 0.9rem;
     font-weight: bold;
 }
-
 
 /* ============================
    FISIOTERAPISTA
@@ -287,7 +289,6 @@ nav a:hover {
     line-height: 1.7;
     margin-bottom: 10px;
 }
-
 
 /* ============================
    DOVE SIAMO
@@ -346,7 +347,6 @@ nav a:hover {
     flex: 2 1 340px;
 }
 
-
 /* ============================
    FOOTER
    ============================ */
@@ -355,6 +355,7 @@ nav a:hover {
     background-color: #2d4a38;
     color: #c8ddd0;
     padding: 50px 5% 20px;
+    width: 100%;
 }
 
 .footer-grid {
@@ -441,19 +442,18 @@ nav a:hover {
 }
 
 /* ============================
-   RESPONSIVE — aggiunto
+   RESPONSIVE
    ============================ */
 
-@media (max-width: 600px) {
-    .studio-gallery     { flex-direction: column; }
-    .fisio-wrapper      { flex-direction: column; align-items: center; text-align: center; }
-    .dove-wrapper       { flex-direction: column; }
-    .footer-grid        { flex-direction: column; }
-    .footer-bottom      { flex-direction: column; text-align: center; }
-}
-
-/* RESPONSIVE */
 @media (max-width: 768px) {
     nav { display: none; }
     .hamburger { display: block; cursor: pointer; }
+}
+
+@media (max-width: 600px) {
+    .studio-gallery  { flex-direction: column; }
+    .fisio-wrapper   { flex-direction: column; align-items: center; text-align: center; }
+    .dove-wrapper    { flex-direction: column; }
+    .footer-grid     { flex-direction: column; }
+    .footer-bottom   { flex-direction: column; text-align: center; }
 }
