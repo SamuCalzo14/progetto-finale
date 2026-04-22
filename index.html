@@ -4,18 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Studio RC — Fisioterapia</title>
-
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" 
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
   <link rel="stylesheet" href="main.css">
 </head>
 <body>
 
-  <header>
+<header>
+
     <!-- HEADER 1 -->
     <div id="header1">
         <h1>Studio RC</h1>
@@ -24,8 +20,8 @@
             <a href="#sec-fisio">Il fisioterapista</a>
             <a href="#sec-prenota">Prenota</a>
             <a href="#sec-dove">Dove siamo</a>
-            <a href="" class="btn1 btn1-accedi">
-                Accedi <i class="fa-solid fa-circle-user"></i>
+            <a href="" class="btn1-accedi">
+                Accedi <i class="fa-regular fa-circle-user"></i>
             </a>
         </nav>
         <button class="hamburger" onclick="toggleMenu()">
@@ -35,193 +31,213 @@
 
     <!-- MENU MOBILE -->
     <div class="menu-mobile" id="menu-mobile">
-        <a href="">Accedi <i class="fa-solid fa-circle-user"></i></a>
-        <a href="#studio"     onclick="chiudiMenu()">Lo studio <i class="fa-solid fa-building"></i></a>
-        <a href="#sec-fisio"  onclick="chiudiMenu()">Fisioterapista <i class="fa-solid fa-user-doctor"></i></a>
-        <a href="#sec-prenota"onclick="chiudiMenu()">Prenota <i class="fa-regular fa-calendar"></i></a>
-        <a href="#sec-dove"   onclick="chiudiMenu()">Dove siamo <i class="fa-solid fa-map-pin"></i></a>
+        <a href="" onclick="chiudiMenu()">Accedi <i class="fa-regular fa-circle-user"></i></a>
+        <a href="#studio"      onclick="chiudiMenu()">Lo studio</a>
+        <a href="#sec-fisio"   onclick="chiudiMenu()">Il fisioterapista</a>
+        <a href="#sec-prenota" onclick="chiudiMenu()">Prenota</a>
+        <a href="#sec-dove"    onclick="chiudiMenu()">Dove siamo</a>
     </div>
 
-    <!-- HEADER 2 -->
+    <!-- HEADER 2 — HERO -->
     <div id="header2">
-        <h2>La tua salute,<br>nelle mani giuste.</h2>
+        <h2>La tua salute,nelle <br> <span>mani giuste.</span></h2>
         <p>Prenota una visita fisioterapica in pochi click.</p>
-        <a href="#sec-prenota" class="btn1 btn1-prenota">
+        <a href="#sec-prenota" class="btn1-prenota">
             Prenota ora <i class="fa-regular fa-calendar"></i>
         </a>
     </div>
-  </header>
 
-  <main>
+</header>
 
-    <!-- SECTION STUDIO -->
-<section class="sec-index" id="studio">
-    <div class="sec-content">
-        <h2 class="sec-h2">Lo Studio</h2>
-        <p class="sec-desc">
-            Studio RC è un centro fisioterapico moderno e accogliente,
-            pensato per offrirti cure personalizzate in un ambiente tranquillo e professionale.
-        </p>
-        <div class="studio-gallery">
-            <div class="studio-card">
-                <img src="https://placehold.co/400x250/a8c3b2/3e5844?text=Sala+Trattamento" alt="Sala trattamento">
-                <p>Sala Trattamento</p>
-            </div>
-            <div class="studio-card">
-                <img src="https://placehold.co/400x250/a8c3b2/3e5844?text=Attrezzature" alt="Attrezzature">
-                <p>Attrezzature Moderne</p>
-            </div>
-            <div class="studio-card">
-                <img src="https://placehold.co/400x250/a8c3b2/3e5844?text=Sala+Attesa" alt="Sala attesa">
-                <p>Sala d'Attesa</p>
-            </div>
+<main>
+
+    <!-- ========================
+         SECTION STUDIO
+         ======================== -->
+    <section id="studio">
+
+        <div class="section-intro">
+            <p class="section-label">Lo studio</p>
+            <h2>Un luogo pensato per te</h2>
+            <p>Ambienti moderni, attrezzature all'avanguardia e un team dedicato per offrirti il miglior percorso riabilitativo.</p>
         </div>
-    </div>
-</section>
 
-<!-- SECTION IL FISIOTERAPISTA -->
-<section class="sec-index sec-alt" id="sec-fisio">
-    <div class="sec-content">
-        <h2 class="sec-h2">Il Fisioterapista</h2>
-        <div class="fisio-wrapper">
-            <img src="https://placehold.co/180x180/538969/ffffff?text=RC" alt="Foto fisioterapista" class="fisio-foto">
-            <div class="fisio-bio">
-                <h3>Dott. Rossi Carlo</h3>
-                <p class="fisio-titolo">Fisioterapista — Laurea in Fisioterapia, Università di Padova</p>
+        <div class="studio-grid">
+
+            <div class="studio-card">
+                <div class="foto-placeholder">
+                    <!-- Sostituisci con: <img src="images/sala1.jpg" alt="Sala trattamenti"> -->
+                    <i class="fa-solid fa-bed-pulse"></i>
+                </div>
+                <div class="card-body">
+                    <h3>Sala trattamenti</h3>
+                    <p>Lettini professionali e attrezzature per la terapia manuale e fisica, in un ambiente tranquillo e riservato.</p>
+                </div>
+            </div>
+
+            <div class="studio-card">
+                <div class="foto-placeholder" style="background: linear-gradient(135deg, #b7ddc2, #74b88a);">
+                    <!-- Sostituisci con: <img src="images/palestra.jpg" alt="Palestra riabilitativa"> -->
+                    <i class="fa-solid fa-dumbbell"></i>
+                </div>
+                <div class="card-body">
+                    <h3>Palestra riabilitativa</h3>
+                    <p>Spazio attrezzato per la riabilitazione attiva, con macchinari e strumenti per ogni esigenza.</p>
+                </div>
+            </div>
+
+            <div class="studio-card">
+                <div class="foto-placeholder" style="background: linear-gradient(135deg, #a8d5b5, #538969);">
+                    <!-- Sostituisci con: <img src="images/accoglienza.jpg" alt="Sala accoglienza"> -->
+                    <i class="fa-solid fa-couch"></i>
+                </div>
+                <div class="card-body">
+                    <h3>Sala accoglienza</h3>
+                    <p>Un ambiente accogliente dove ricevere informazioni e prepararsi alla visita in totale relax.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ========================
+         SECTION FISIOTERAPISTA
+         ======================== -->
+    <section id="sec-fisio">
+
+        <div class="fisio-wrap">
+
+            <!-- FOTO -->
+            <div class="fisio-foto">
+                <div class="fisio-placeholder">
+                    <!-- Sostituisci con: <img src="images/fisioterapista.jpg" alt="Dott. Rossi"> -->
+                    <i class="fa-solid fa-user-doctor"></i>
+                </div>
+                <div class="fisio-badge">
+                    <strong>8+</strong>
+                    <span>anni di esperienza</span>
+                </div>
+            </div>
+
+            <!-- TESTO -->
+            <div class="fisio-testo">
+                <p class="section-label">Il fisioterapista</p>
+                <h2>Dott. Marco Rossi</h2>
+                <p class="fisio-titolo">Fisioterapista specializzato in riabilitazione ortopedica</p>
                 <p>
-                    Con oltre 10 anni di esperienza nel settore, il Dott. Rossi si occupa
-                    di riabilitazione ortopedica, posturale e sportiva. Il suo approccio
-                    è sempre personalizzato, partendo da un'accurata valutazione del paziente
-                    per costruire un percorso terapeutico su misura.
+                    Laureato in Fisioterapia presso l'Università di Padova, con specializzazione in terapia manuale e riabilitazione sportiva.
                 </p>
                 <p>
-                    Aggiornato costantemente con corsi di formazione, integra le più recenti
-                    tecniche manuali e strumentali per garantire risultati efficaci e duraturi.
+                    Nel corso degli anni ha seguito centinaia di pazienti, sviluppando un approccio personalizzato che combina tecniche classiche e metodologie moderne per garantire il miglior risultato possibile.
                 </p>
+                <div class="fisio-tags">
+                    <span class="tag">Terapia manuale</span>
+                    <span class="tag">Riabilitazione sportiva</span>
+                    <span class="tag">Ortopedia</span>
+                    <span class="tag">Neurologia</span>
+                    <span class="tag">Posturologia</span>
+                </div>
             </div>
-        </div>
-    </div>
-</section>
 
-<!-- SECTION DOVE SIAMO -->
-<section class="sec-index" id="sec-dove">
-    <div class="sec-content">
-        <h2 class="sec-h2">Dove Siamo</h2>
-        <div class="dove-wrapper">
+        </div>
+
+    </section>
+
+    <!-- ========================
+         SECTION DOVE SIAMO
+         ======================== -->
+    <section id="sec-dove">
+
+        <div class="dove-wrap">
+
+            <!-- MAPPA -->
+            <div class="mappa-placeholder">
+                <!-- Sostituisci con un iframe Google Maps -->
+                <i class="fa-solid fa-location-dot"></i>
+                <p>Google Maps</p>
+            </div>
+
+            <!-- INFO -->
             <div class="dove-info">
-                <div class="info-block">
-                    <i class="fa-solid fa-map-pin"></i>
+                <p class="section-label">Dove siamo</p>
+                <h2>Vieni a trovarci</h2>
+
+                <div class="contatto-riga">
+                    <i class="fa-solid fa-location-dot"></i>
                     <div>
                         <strong>Indirizzo</strong>
-                        <p>Via Roma 12, 30170 Mestre (VE)</p>
+                        <span>Via Roma 12, 30015 Chioggia (VE)</span>
                     </div>
                 </div>
-                <div class="info-block">
+
+                <div class="contatto-riga">
                     <i class="fa-solid fa-phone"></i>
                     <div>
                         <strong>Telefono</strong>
-                        <p><a href="tel:+390412345678">041 234 5678</a></p>
+                        <span>+39 041 000 0000</span>
                     </div>
                 </div>
-                <div class="info-block">
-                    <i class="fa-regular fa-envelope"></i>
+
+                <div class="contatto-riga">
+                    <i class="fa-solid fa-envelope"></i>
                     <div>
                         <strong>Email</strong>
-                        <p><a href="mailto:info@studiorc.it">info@studiorc.it</a></p>
+                        <span>info@studiorc.it</span>
                     </div>
                 </div>
-                <div class="info-block">
-                    <i class="fa-regular fa-clock"></i>
-                    <div>
-                        <strong>Orari</strong>
-                        <p>Lun – Ven: 8:00 – 19:00</p>
-                        <p>Sab: 8:00 – 13:00</p>
-                    </div>
+
+                <div class="orari">
+                    <h4><i class="fa-regular fa-clock"></i> &nbsp;Orari di apertura</h4>
+                    <div class="orario-riga"><span>Lunedì – Venerdì</span><span>8:00 – 19:00</span></div>
+                    <div class="orario-riga"><span>Sabato</span><span>8:00 – 13:00</span></div>
+                    <div class="orario-riga"><span>Domenica</span><span>Chiuso</span></div>
                 </div>
+
             </div>
-            <div class="dove-mappa">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22283.19!2d12.2372!3d45.4897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477ead4adf4a21e7%3A0x4fec3b748bc59e9c!2sMestre%2C%20Venezia!5e0!3m2!1sit!2sit!4v1700000000000"
-                    width="100%" height="300"
-                    style="border:0; border-radius: 10px;"
-                    allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </div>
+
         </div>
-    </div>
-</section>
 
-  </main>
+    </section>
 
-  <footer id="footer">
-    <div class="footer-grid">
+</main>
 
-        <!-- COLONNA 1: Brand -->
-        <div class="footer-col">
+<!-- ========================
+     FOOTER
+     ======================== -->
+<footer>
+
+    <div class="footer-wrap">
+
+        <div class="footer-brand">
             <h3>Studio RC</h3>
-            <p>Fisioterapia professionale a Mestre.<br>La tua salute, nelle mani giuste.</p>
+            <p>Fisioterapia e riabilitazione a Chioggia. Il tuo benessere è la nostra priorità.</p>
         </div>
 
-        <!-- COLONNA 2: Contatti -->
+        <div class="footer-col">
+            <h4>Navigazione</h4>
+            <a href="#studio">Lo studio</a>
+            <a href="#sec-fisio">Il fisioterapista</a>
+            <a href="#sec-prenota">Prenota</a>
+            <a href="#sec-dove">Dove siamo</a>
+        </div>
+
         <div class="footer-col">
             <h4>Contatti</h4>
-            <p><i class="fa-solid fa-map-pin"></i> Via Roma 12, 30170 Mestre (VE)</p>
-            <p><i class="fa-solid fa-phone"></i> <a href="tel:+390412345678">041 234 5678</a></p>
-            <p><i class="fa-regular fa-envelope"></i> <a href="mailto:info@studiorc.it">info@studiorc.it</a></p>
-        </div>
-
-        <!-- COLONNA 3: Orari -->
-        <div class="footer-col">
-            <h4>Orari</h4>
-            <p>Lunedì – Venerdì: 8:00 – 19:00</p>
-            <p>Sabato: 8:00 – 13:00</p>
-            <p>Domenica: chiuso</p>
-        </div>
-
-        <!-- COLONNA 4: Social -->
-        <div class="footer-col">
-            <h4>Seguici</h4>
-            <div class="footer-social">
-                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
-                <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-            </div>
+            <p>Via Roma 12<br>30015 Chioggia (VE)</p>
+            <p>+39 041 000 0000</p>
+            <p>info@studiorc.it</p>
         </div>
 
     </div>
 
     <div class="footer-bottom">
-        <p>© 2025 Studio RC di Rossi Carlo — P.IVA 01234567890 — Via Roma 12, Mestre (VE)</p>
-        <p>
-            <a href="#">Privacy Policy</a>;
-            <a href="#">Cookie Policy</a>
-        </p>
+        <span>© 2025 Studio RC — Tutti i diritti riservati</span>
+        <span>P.IVA 00000000000</span>
     </div>
+
 </footer>
 
-  <script>
-    function toggleMenu() {
-        const menu = document.getElementById("menu-mobile");
-        menu.style.display = menu.style.display === "flex" ? "none" : "flex";
-    }
-    function chiudiMenu() {
-        document.getElementById("menu-mobile").style.display = "none";
-    }
-
-    /* SLIDER */
-    let cur = 0;
-    const tot = 2;
-
-    function aggiorna() {
-        document.getElementById("sliderTrack").style.transform = "translateX(-" + cur * 100 + "%)";
-        document.querySelectorAll(".dot").forEach(function(d, i) {
-            d.classList.toggle("on", i === cur);
-        });
-    }
-    function cambiaSlide(dir) { cur = (cur + dir + tot) % tot; aggiorna(); }
-    function vaiSlide(i)      { cur = i; aggiorna(); }
-  </script>
-
+<script src="indexScript.js"></script>
 </body>
 </html>

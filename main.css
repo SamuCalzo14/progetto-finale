@@ -1,459 +1,645 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@300;400;600&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* BODY */
 body {
-    font-family: Arial;
+    font-family: 'DM Sans', sans-serif;
+    background-color: #ffffff;
+    color: #1a3328;
 }
 
-/* LARGHEZZA PIENA */
 header, main, footer {
     width: 100%;
 }
 
-main {
-    background-color: #e0e0e0;
-}
+/* ==============================
+   HEADER 1 — navbar
+   ============================== */
 
-/* H1 */
 h1 {
-    color: #c8ddd0;
-    font-size: 25px;
+    font-family: 'Playfair Display', serif;
+    color: #a8d5b5;
+    font-size: 22px;
+    letter-spacing: 1px;
 }
 
-#header2 h2 {
-    font-size: 42px;
-    margin-bottom: 15px;
-    color: #3e5844;
-}
-
-/* BOTTONI BASE */
-.btn1 {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 12px 24px;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: bold;
-    text-align: center;
-    transition: 0.7s;
-}
-
-/* Variante Accedi desktop */
-.btn1-accedi {
-    padding: 8px 12px;
-    background: transparent;
-    color: #c8ddd0;
-    border: 1px solid #c8ddd0;
-}
-
-.btn1-accedi:hover {
-    background: #74b88a;
-    color: #1e3a2a;
-}
-
-/* Variante Prenota */
-.btn1-prenota {
-    background: #74b88a;
-    color: #1e3a2a;
-    box-shadow: 0 6px 10px rgba(0,0,0,0.15);
-    transition: 0.2s;
-}
-
-.btn1-prenota:hover {
-    background: #95cba7;
-    transform: translateY(-2px);
-    box-shadow: 0 10px 18px rgba(0,0,0,0.2);
-}
-
-.btn1-prenota:active {
-    transform: translateY(2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-}
-
-/* HEADER 1 — fisso in cima, larghezza piena */
 #header1 {
-    padding: 20px 25px;
+    padding: 0 40px;
+    height: 65px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #538969;
+    background-color: #1a3328;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* NAV */
 nav {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 8px;
 }
 
 nav a {
-    color: #bfdbca;
+    color: rgba(168, 213, 181, 0.8);
     text-decoration: none;
-    font-size: 0.92rem;
-    padding: 6px 13px;
-    border-radius: 10px;
-    border: 2px solid transparent;
-    transition: color 0.2s, border-color 0.6s;
+    font-size: 0.88rem;
+    padding: 7px 14px;
+    border-radius: 8px;
+    transition: 0.25s;
 }
 
 nav a:hover {
     color: white;
-    border-color: rgba(116,184,138,0.5);
+    background: rgba(76, 175, 114, 0.15);
 }
 
-/* HAMBURGER */
+.btn1-accedi {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: transparent;
+    color: #a8d5b5;
+    text-decoration: none;
+    border: 1px solid rgba(168, 213, 181, 0.4);
+    border-radius: 10px;
+    font-size: 0.88rem;
+    transition: 0.3s;
+}
+
+.btn1-accedi:hover {
+    background: rgba(76, 175, 114, 0.15);
+    color: white;
+    border-color: #4caf72;
+}
+
 .hamburger {
     display: none;
     background: none;
-    border: 1px solid #74b88a;
-    color: #74b88a;
-    padding: 5px 10px;
-    border-radius: 5px;
+    border: 1px solid rgba(76, 175, 114, 0.4);
+    color: #a8d5b5;
+    padding: 6px 11px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: 0.6s;
+    transition: 0.3s;
 }
 
 .hamburger:hover {
-    background-color: #4e7a5f;
+    background: rgba(76, 175, 114, 0.15);
 }
 
-/* HEADER — padding top per compensare header1 fisso */
 header {
     padding-top: 65px;
 }
 
-/* HEADER 2 */
-#header2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-    min-height: 100vh;
-    
-    text-align: center;
-    padding: 40px 20px;
-    
-    background: linear-gradient(#538969, #a8c3b2, #e0e0e0, #f6f6f6);
-}
+/* ==============================
+   MENU MOBILE
+   ============================== */
 
-#header2 p {
-    margin-bottom: 25px;
-    color: #5e8066;
-}
-
-/* MENU MOBILE — fisso sotto header1 */
 .menu-mobile {
     display: none;
     flex-direction: column;
-    background: #4e7a5f;
-    padding: 15px 20px;
-    gap: 10px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    background: #1a3328;
+    padding: 16px 24px 24px;
+    gap: 8px;
     position: fixed;
     top: 65px;
     left: 0;
     right: 0;
     z-index: 999;
-    width: 100%;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
 }
 
 .menu-mobile a {
-    margin-left: 30%;
-    margin-right: 30%;
     text-decoration: none;
-    color: #c8ddd0;
+    color: #a8d5b5;
     padding: 12px;
-    border-radius: 12px;
-    border: 1px solid transparent;
+    border-radius: 10px;
     text-align: center;
-    transition: 0.5s;
+    font-size: 0.92rem;
+    transition: 0.3s;
+    border: 1px solid transparent;
 }
 
 .menu-mobile a:hover {
-    background-color: #3a5a47;
+    background: rgba(76, 175, 114, 0.15);
     color: white;
-    border-color: #74b88a;
+    border-color: rgba(76, 175, 114, 0.3);
 }
 
-/* ============================
-   SECTIONS COMUNI
-   ============================ */
+/* ==============================
+   HEADER 2 — HERO
+   ============================== */
 
-.sec-index {
-    padding: 60px 0;
-    background-color: #ffffff;
-    width: 100%;
+#header2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(160deg, #1a3328, #2d5a3d, #3a7a52);
 }
 
-.sec-alt {
+#header2 h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    margin-bottom: 15px;
+    color: #ffffff;
+    line-height: 1.15;
+}
+
+#header2 p {
+    margin-bottom: 30px;
+    color: rgba(168, 213, 181, 0.75);
+    font-size: 1.05rem;
+    font-weight: 300;
+    max-width: 400px;
+    line-height: 1.7;
+}
+
+.btn1-prenota {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 30px;
+    background: #4caf72;
+    color: #1a3328;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    box-shadow: 0 6px 20px rgba(76, 175, 114, 0.35);
+    transition: 0.3s;
+}
+
+.btn1-prenota:hover {
+    background: #5dc880;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(76, 175, 114, 0.45);
+}
+
+/* ==============================
+   SECTION STUDIO
+   ============================== */
+
+#studio {
     background-color: #f4f8f5;
+    padding: 90px 30px;
 }
 
-.sec-content {
+.section-intro {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 60px;
+}
+
+.section-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #4caf72;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.section-label::before,
+.section-label::after {
+    content: '';
+    width: 20px;
+    height: 2px;
+    background: #4caf72;
+    border-radius: 2px;
+}
+
+.section-intro h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: #1a3328;
+    margin-bottom: 14px;
+    line-height: 1.2;
+}
+
+.section-intro p {
+    color: #6a8a74;
+    font-size: 0.95rem;
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+/* Griglia foto studio */
+.studio-grid {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 0 5%;
-}
-
-.sec-h2 {
-    font-size: 28px;
-    color: #3e5844;
-    margin-bottom: 10px;
-    border-left: 4px solid #74b88a;
-    padding-left: 14px;
-}
-
-.sec-desc {
-    color: #5e8066;
-    margin-bottom: 35px;
-    max-width: 680px;
-}
-
-/* ============================
-   STUDIO — GALLERY
-   ============================ */
-
-.studio-gallery {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
 }
 
 .studio-card {
-    flex: 1 1 220px;
-    border-radius: 10px;
+    background: #ffffff;
+    border-radius: 18px;
     overflow: hidden;
-    border: 1px solid #d4e8dc;
-    background: #f4f8f5;
-    text-align: center;
+    box-shadow: 0 4px 20px rgba(26, 51, 40, 0.08);
+    border: 1px solid rgba(76, 175, 114, 0.1);
+    transition: 0.3s;
 }
 
-.studio-card img {
+.studio-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 36px rgba(26, 51, 40, 0.14);
+}
+
+.studio-card .foto-placeholder {
     width: 100%;
-    display: block;
+    aspect-ratio: 4/3;
+    background: linear-gradient(135deg, #c8e6d0, #8ec9a2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2d5a3d;
+    font-size: 2.5rem;
+}
+
+.studio-card .card-body {
+    padding: 20px;
+}
+
+.studio-card h3 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #1a3328;
+    margin-bottom: 6px;
 }
 
 .studio-card p {
-    padding: 10px;
-    color: #3e5844;
-    font-size: 0.9rem;
-    font-weight: bold;
-}
-
-/* ============================
-   FISIOTERAPISTA
-   ============================ */
-
-.fisio-wrapper {
-    display: flex;
-    gap: 35px;
-    align-items: flex-start;
-    flex-wrap: wrap;
-}
-
-.fisio-foto {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid #74b88a;
-    flex-shrink: 0;
-}
-
-.fisio-bio h3 {
-    font-size: 22px;
-    color: #3e5844;
-    margin-bottom: 5px;
-}
-
-.fisio-titolo {
-    color: #74b88a;
-    font-size: 0.9rem;
-    margin-bottom: 15px;
-}
-
-.fisio-bio p {
-    color: #555;
+    font-size: 0.82rem;
+    color: #7a9484;
+    font-weight: 300;
     line-height: 1.7;
-    margin-bottom: 10px;
 }
 
-/* ============================
-   DOVE SIAMO
-   ============================ */
+/* ==============================
+   SECTION FISIOTERAPISTA
+   ============================== */
 
-.dove-wrapper {
-    display: flex;
-    gap: 40px;
-    flex-wrap: wrap;
-    align-items: flex-start;
+#sec-fisio {
+    background-color: #ffffff;
+    padding: 90px 30px;
 }
 
-.dove-info {
-    flex: 1 1 220px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.fisio-wrap {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 70px;
+    align-items: center;
 }
 
-.info-block {
-    display: flex;
-    align-items: flex-start;
-    gap: 14px;
+/* Foto fisioterapista */
+.fisio-foto {
+    position: relative;
 }
 
-.info-block i {
-    font-size: 18px;
-    color: #74b88a;
-    margin-top: 3px;
-    width: 20px;
-    text-align: center;
-}
-
-.info-block strong {
-    display: block;
-    color: #3e5844;
-    margin-bottom: 3px;
-}
-
-.info-block p {
-    color: #555;
-    margin: 0;
-    font-size: 0.92rem;
-}
-
-.info-block a {
-    color: #538969;
-    text-decoration: none;
-}
-
-.info-block a:hover {
-    text-decoration: underline;
-}
-
-.dove-mappa {
-    flex: 2 1 340px;
-}
-
-/* ============================
-   FOOTER
-   ============================ */
-
-#footer {
-    background-color: #2d4a38;
-    color: #c8ddd0;
-    padding: 50px 5% 20px;
+.fisio-placeholder {
     width: 100%;
-}
-
-.footer-grid {
+    aspect-ratio: 3/4;
+    background: linear-gradient(160deg, #c8e6d0, #7bbf96);
+    border-radius: 24px;
     display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-bottom: 35px;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+    color: #2d5a3d;
+    box-shadow: 0 16px 48px rgba(26, 51, 40, 0.15);
 }
 
-.footer-col {
-    flex: 1 1 180px;
+/* Badge esperienza */
+.fisio-badge {
+    position: absolute;
+    bottom: 24px;
+    right: -16px;
+    background: #1a3328;
+    color: #a8d5b5;
+    padding: 14px 20px;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
 }
 
-.footer-col h3 {
-    font-size: 20px;
-    color: #a8c3b2;
-    margin-bottom: 10px;
+.fisio-badge strong {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #4caf72;
+    line-height: 1;
 }
 
-.footer-col h4 {
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: #74b88a;
+.fisio-badge span {
+    font-size: 0.72rem;
+    font-weight: 300;
+    letter-spacing: 0.06em;
+}
+
+/* Testo fisioterapista */
+.fisio-testo .section-label {
+    justify-content: flex-start;
+}
+
+.fisio-testo .section-label::after {
+    display: none;
+}
+
+.fisio-testo h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: #1a3328;
+    margin-bottom: 6px;
+    line-height: 1.2;
+}
+
+.fisio-testo .fisio-titolo {
+    color: #4caf72;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    letter-spacing: 0.04em;
+}
+
+.fisio-testo p {
+    color: #6a8a74;
+    font-size: 0.93rem;
+    font-weight: 300;
+    line-height: 1.85;
     margin-bottom: 12px;
 }
 
-.footer-col p {
-    font-size: 0.9rem;
-    line-height: 1.8;
-    color: #a8c3b2;
+/* Competenze */
+.fisio-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 24px;
 }
 
-.footer-col p i {
-    margin-right: 7px;
-    color: #74b88a;
-    width: 14px;
+.tag {
+    background: #f4f8f5;
+    color: #2d5a3d;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 7px 14px;
+    border-radius: 8px;
+    border: 1px solid rgba(76, 175, 114, 0.2);
+}
+
+/* ==============================
+   SECTION DOVE SIAMO
+   ============================== */
+
+#sec-dove {
+    background-color: #f4f8f5;
+    padding: 90px 30px;
+}
+
+.dove-wrap {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+/* Mappa placeholder */
+.mappa-placeholder {
+    width: 100%;
+    aspect-ratio: 4/3;
+    background: linear-gradient(135deg, #d4edd9, #a8d5b5);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: #2d5a3d;
+    font-size: 3rem;
+    box-shadow: 0 10px 32px rgba(26, 51, 40, 0.12);
+}
+
+.mappa-placeholder p {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #2d5a3d;
+    letter-spacing: 0.06em;
+}
+
+/* Info contatti */
+.dove-info .section-label {
+    justify-content: flex-start;
+}
+
+.dove-info .section-label::after {
+    display: none;
+}
+
+.dove-info h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: #1a3328;
+    margin-bottom: 28px;
+    line-height: 1.2;
+}
+
+.contatto-riga {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 18px;
+}
+
+.contatto-riga i {
+    font-size: 1rem;
+    color: #4caf72;
+    background: #eef6f0;
+    padding: 10px;
+    border-radius: 10px;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.contatto-riga strong {
+    display: block;
+    font-size: 0.82rem;
+    color: #7a9484;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 2px;
+}
+
+.contatto-riga span {
+    font-size: 0.92rem;
+    color: #1a3328;
+    font-weight: 400;
+}
+
+/* Orari */
+.orari {
+    margin-top: 28px;
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 20px;
+    border: 1px solid rgba(76, 175, 114, 0.15);
+}
+
+.orari h4 {
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #4caf72;
+    margin-bottom: 14px;
+}
+
+.orario-riga {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    padding: 6px 0;
+    border-bottom: 1px solid #f0f5f2;
+    color: #3d5244;
+}
+
+.orario-riga:last-child {
+    border-bottom: none;
+}
+
+.orario-riga span:last-child {
+    font-weight: 600;
+    color: #1a3328;
+}
+
+/* ==============================
+   FOOTER
+   ============================== */
+
+footer {
+    background-color: #1a3328;
+    padding: 50px 30px 28px;
+}
+
+.footer-wrap {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 50px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(168, 213, 181, 0.12);
+}
+
+.footer-brand h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: #a8d5b5;
+    margin-bottom: 12px;
+}
+
+.footer-brand p {
+    font-size: 0.85rem;
+    color: rgba(168, 213, 181, 0.55);
+    font-weight: 300;
+    line-height: 1.8;
+    max-width: 260px;
+}
+
+.footer-col h4 {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #4caf72;
+    margin-bottom: 16px;
 }
 
 .footer-col a {
-    color: #a8c3b2;
+    display: block;
+    color: rgba(168, 213, 181, 0.6);
     text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 300;
+    margin-bottom: 10px;
+    transition: color 0.25s;
 }
 
 .footer-col a:hover {
-    color: #ffffff;
+    color: #a8d5b5;
 }
 
-.footer-social {
-    display: flex;
-    gap: 14px;
-    margin-top: 5px;
-}
-
-.footer-social a {
-    font-size: 22px;
-    color: #74b88a;
-    transition: color 0.3s;
-}
-
-.footer-social a:hover {
-    color: #ffffff;
+.footer-col p {
+    color: rgba(168, 213, 181, 0.6);
+    font-size: 0.88rem;
+    font-weight: 300;
+    margin-bottom: 10px;
+    line-height: 1.6;
 }
 
 .footer-bottom {
-    border-top: 1px solid #3e5844;
-    padding-top: 18px;
+    max-width: 1000px;
+    margin: 24px auto 0;
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 8px;
-    font-size: 0.8rem;
-    color: #7a9e8a;
+    align-items: center;
+    font-size: 0.78rem;
+    color: rgba(168, 213, 181, 0.35);
 }
 
-.footer-bottom a {
-    color: #7a9e8a;
-    text-decoration: none;
-}
-
-.footer-bottom a:hover {
-    color: #c8ddd0;
-}
-
-/* ============================
+/* ==============================
    RESPONSIVE
-   ============================ */
+   ============================== */
 
 @media (max-width: 768px) {
     nav { display: none; }
-    .hamburger { display: block; cursor: pointer; }
-}
+    .hamburger { display: block; }
+    #header1 { padding: 0 20px; }
+    #header2 h2 { font-size: 2.4rem; }
 
-@media (max-width: 600px) {
-    .studio-gallery  { flex-direction: column; }
-    .fisio-wrapper   { flex-direction: column; align-items: center; text-align: center; }
-    .dove-wrapper    { flex-direction: column; }
-    .footer-grid     { flex-direction: column; }
-    .footer-bottom   { flex-direction: column; text-align: center; }
+    .studio-grid { grid-template-columns: 1fr; }
+
+    .fisio-wrap {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .fisio-badge { right: 12px; }
+
+    .dove-wrap {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+
+    .footer-wrap {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
 }
