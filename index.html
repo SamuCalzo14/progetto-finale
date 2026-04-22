@@ -4,69 +4,117 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Studio RC — Fisioterapia</title>
+
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <link rel="stylesheet" href="main.css">
 </head>
 <body>
 
-<header>
-
-    <!-- HEADER 1 -->
-    <div id="header1">
-        <h1>Studio RC</h1>
-        <nav>
-            <a href="#studio">Lo studio</a>
-            <a href="#sec-fisio">Il fisioterapista</a>
-            <a href="#sec-prenota">Prenota</a>
-            <a href="#sec-dove">Dove siamo</a>
-            <a href="" class="btn1-accedi">
-                Accedi <i class="fa-regular fa-circle-user"></i>
-            </a>
-        </nav>
-        <button class="hamburger" onclick="toggleMenu()">
-            <i class="fa-solid fa-bars"></i>
-        </button>
-    </div>
-
-    <!-- MENU MOBILE -->
-    <div class="menu-mobile" id="menu-mobile">
-        <a href="" onclick="chiudiMenu()">Accedi <i class="fa-regular fa-circle-user"></i></a>
-        <a href="#studio"      onclick="chiudiMenu()">Lo studio</a>
-        <a href="#sec-fisio"   onclick="chiudiMenu()">Il fisioterapista</a>
-        <a href="#sec-prenota" onclick="chiudiMenu()">Prenota</a>
-        <a href="#sec-dove"    onclick="chiudiMenu()">Dove siamo</a>
-    </div>
-
-    <!-- HEADER 2 — HERO -->
-    <div id="header2">
-        <h2>La tua salute,nelle <br> <span>mani giuste.</span></h2>
-        <p>Prenota una visita fisioterapica in pochi click.</p>
-        <a href="#sec-prenota" class="btn1-prenota">
-            Prenota ora <i class="fa-regular fa-calendar"></i>
+<!-- ========================
+     NAVBAR
+     ======================== -->
+<div id="header1">
+    <a href="#" class="logo">Studio <span>RC</span></a>
+    <nav>
+        <a href="#studio">Lo studio</a>
+        <a href="#sec-fisio">Il fisioterapista</a>
+        <a href="#sec-dove">Dove siamo</a>
+        <a href="#sec-prenota" class="btn-accedi">
+            <i class="fa-regular fa-calendar"></i> Prenota
         </a>
-    </div>
+        <a href="#" class="btn-accedi btn-outline">
+            <i class="fa-regular fa-circle-user"></i> Accedi
+        </a>
+    </nav>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+        <span></span><span></span><span></span>
+    </button>
+</div>
 
-</header>
+<!-- MENU MOBILE -->
+<div class="menu-mobile" id="menu-mobile">
+    <a href="#studio"      onclick="chiudiMenu()">Lo studio</a>
+    <a href="#sec-fisio"   onclick="chiudiMenu()">Il fisioterapista</a>
+    <a href="#sec-dove"    onclick="chiudiMenu()">Dove siamo</a>
+    <a href="#sec-prenota" onclick="chiudiMenu()">Prenota</a>
+    <a href="#"            onclick="chiudiMenu()">Accedi</a>
+</div>
+
+<!-- ========================
+     HERO
+     ======================== -->
+<section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+        <p class="hero-label">Fisioterapia professionale · Mestre, Venezia</p>
+        <h1>La tua salute,<br><em>nelle mani giuste.</em></h1>
+        <p class="hero-sub">Percorsi riabilitativi personalizzati in uno studio moderno e accogliente.</p>
+        <div class="hero-cta">
+            <a href="#sec-prenota" class="btn-primary">
+                Prenota una visita <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="#studio" class="btn-ghost">
+                Scopri lo studio
+            </a>
+        </div>
+    </div>
+    <div class="hero-scroll">
+        <span>Scorri</span>
+        <i class="fa-solid fa-chevron-down"></i>
+    </div>
+</section>
+
+<!-- ========================
+     NUMERI / STATS
+     ======================== -->
+<section id="stats">
+    <div class="stats-grid">
+        <div class="stat-item">
+            <strong>500+</strong>
+            <span>Pazienti seguiti</span>
+        </div>
+        <div class="stat-item">
+            <strong>8+</strong>
+            <span>Anni di esperienza</span>
+        </div>
+        <div class="stat-item">
+            <strong>15+</strong>
+            <span>Tecniche terapeutiche</span>
+        </div>
+        <div class="stat-item">
+            <strong>98%</strong>
+            <span>Pazienti soddisfatti</span>
+        </div>
+    </div>
+</section>
 
 <main>
 
-    <!-- ========================
-         SECTION STUDIO
-         ======================== -->
-    <section id="studio">
+<!-- ========================
+     SECTION STUDIO
+     ======================== -->
+<section id="studio">
+    <div class="section-inner">
 
-        <div class="section-intro">
-            <p class="section-label">Lo studio</p>
-            <h2>Un luogo pensato per te</h2>
-            <p>Ambienti moderni, attrezzature all'avanguardia e un team dedicato per offrirti il miglior percorso riabilitativo.</p>
+        <div class="section-header">
+            <p class="label-tag">Lo studio</p>
+            <h2>Un luogo pensato <br>per la tua salute</h2>
+            <p class="section-sub">Ambienti moderni e attrezzature all'avanguardia per offrirti il miglior percorso riabilitativo.</p>
         </div>
 
         <div class="studio-grid">
 
             <div class="studio-card">
-                <div class="foto-placeholder">
-                    <!-- Sostituisci con: <img src="images/sala1.jpg" alt="Sala trattamenti"> -->
+                <div class="card-img" style="background: linear-gradient(135deg, #1a3328, #2d5a3d);">
                     <i class="fa-solid fa-bed-pulse"></i>
                 </div>
                 <div class="card-body">
@@ -75,9 +123,8 @@
                 </div>
             </div>
 
-            <div class="studio-card">
-                <div class="foto-placeholder" style="background: linear-gradient(135deg, #b7ddc2, #74b88a);">
-                    <!-- Sostituisci con: <img src="images/palestra.jpg" alt="Palestra riabilitativa"> -->
+            <div class="studio-card studio-card--featured">
+                <div class="card-img" style="background: linear-gradient(135deg, #2d5a3d, #4caf72);">
                     <i class="fa-solid fa-dumbbell"></i>
                 </div>
                 <div class="card-body">
@@ -87,8 +134,7 @@
             </div>
 
             <div class="studio-card">
-                <div class="foto-placeholder" style="background: linear-gradient(135deg, #a8d5b5, #538969);">
-                    <!-- Sostituisci con: <img src="images/accoglienza.jpg" alt="Sala accoglienza"> -->
+                <div class="card-img" style="background: linear-gradient(135deg, #3a7a52, #a8d5b5);">
                     <i class="fa-solid fa-couch"></i>
                 </div>
                 <div class="card-body">
@@ -98,107 +144,113 @@
             </div>
 
         </div>
+    </div>
+</section>
 
-    </section>
-
-    <!-- ========================
-         SECTION FISIOTERAPISTA
-         ======================== -->
-    <section id="sec-fisio">
-
+<!-- ========================
+     SECTION FISIOTERAPISTA
+     ======================== -->
+<section id="sec-fisio">
+    <div class="section-inner">
         <div class="fisio-wrap">
 
             <!-- FOTO -->
-            <div class="fisio-foto">
-                <div class="fisio-placeholder">
-                    <!-- Sostituisci con: <img src="images/fisioterapista.jpg" alt="Dott. Rossi"> -->
-                    <i class="fa-solid fa-user-doctor"></i>
+            <div class="fisio-foto-wrap">
+                <div class="fisio-foto-inner">
+                    <!-- Sostituisci con: <img src="images/dottore.jpg" alt="Dott. Marco Rossi"> -->
+                    <div class="fisio-placeholder">
+                        <i class="fa-solid fa-user-doctor"></i>
+                    </div>
                 </div>
                 <div class="fisio-badge">
                     <strong>8+</strong>
-                    <span>anni di esperienza</span>
+                    <span>anni di<br>esperienza</span>
                 </div>
             </div>
 
             <!-- TESTO -->
             <div class="fisio-testo">
-                <p class="section-label">Il fisioterapista</p>
+                <p class="label-tag">Il fisioterapista</p>
                 <h2>Dott. Marco Rossi</h2>
-                <p class="fisio-titolo">Fisioterapista specializzato in riabilitazione ortopedica</p>
-                <p>
-                    Laureato in Fisioterapia presso l'Università di Padova, con specializzazione in terapia manuale e riabilitazione sportiva.
-                </p>
-                <p>
-                    Nel corso degli anni ha seguito centinaia di pazienti, sviluppando un approccio personalizzato che combina tecniche classiche e metodologie moderne per garantire il miglior risultato possibile.
-                </p>
+                <p class="fisio-ruolo">Fisioterapista specializzato in riabilitazione ortopedica</p>
+                <p>Laureato in Fisioterapia presso l'Università di Padova, con specializzazione in terapia manuale e riabilitazione sportiva.</p>
+                <p>Ha seguito centinaia di pazienti sviluppando un approccio personalizzato che combina tecniche classiche e metodologie moderne.</p>
+
                 <div class="fisio-tags">
-                    <span class="tag">Terapia manuale</span>
-                    <span class="tag">Riabilitazione sportiva</span>
-                    <span class="tag">Ortopedia</span>
-                    <span class="tag">Neurologia</span>
-                    <span class="tag">Posturologia</span>
+                    <span>Terapia manuale</span>
+                    <span>Riabilitazione sportiva</span>
+                    <span>Ortopedia</span>
+                    <span>Neurologia</span>
+                    <span>Posturologia</span>
                 </div>
+
+                <a href="#sec-prenota" class="btn-primary" style="margin-top: 32px; display: inline-flex;">
+                    Prenota una visita <i class="fa-solid fa-arrow-right"></i>
+                </a>
             </div>
 
         </div>
+    </div>
+</section>
 
-    </section>
-
-    <!-- ========================
-         SECTION DOVE SIAMO
-         ======================== -->
-    <section id="sec-dove">
-
+<!-- ========================
+     SECTION DOVE SIAMO
+     ======================== -->
+<section id="sec-dove">
+    <div class="section-inner">
         <div class="dove-wrap">
 
             <!-- MAPPA -->
-            <div class="mappa-placeholder">
-                <!-- Sostituisci con un iframe Google Maps -->
-                <i class="fa-solid fa-location-dot"></i>
-                <p>Google Maps</p>
+            <div class="mappa-wrap">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22283.19!2d12.2372!3d45.4897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477ead4adf4a21e7%3A0x4fec3b748bc59e9c!2sMestre%2C%20Venezia!5e0!3m2!1sit!2sit!4v1700000000000"
+                    width="100%" height="100%"
+                    style="border:0;"
+                    allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
             </div>
 
             <!-- INFO -->
             <div class="dove-info">
-                <p class="section-label">Dove siamo</p>
+                <p class="label-tag">Dove siamo</p>
                 <h2>Vieni a trovarci</h2>
 
-                <div class="contatto-riga">
-                    <i class="fa-solid fa-location-dot"></i>
+                <div class="contatto-item">
+                    <div class="contatto-icon"><i class="fa-solid fa-location-dot"></i></div>
                     <div>
                         <strong>Indirizzo</strong>
-                        <span>Via Roma 12, 30015 Chioggia (VE)</span>
+                        <span>Via Roma 12, 30170 Mestre (VE)</span>
                     </div>
                 </div>
 
-                <div class="contatto-riga">
-                    <i class="fa-solid fa-phone"></i>
+                <div class="contatto-item">
+                    <div class="contatto-icon"><i class="fa-solid fa-phone"></i></div>
                     <div>
                         <strong>Telefono</strong>
-                        <span>+39 041 000 0000</span>
+                        <span><a href="tel:+390410000000">+39 041 000 0000</a></span>
                     </div>
                 </div>
 
-                <div class="contatto-riga">
-                    <i class="fa-solid fa-envelope"></i>
+                <div class="contatto-item">
+                    <div class="contatto-icon"><i class="fa-solid fa-envelope"></i></div>
                     <div>
                         <strong>Email</strong>
-                        <span>info@studiorc.it</span>
+                        <span><a href="mailto:info@studiorc.it">info@studiorc.it</a></span>
                     </div>
                 </div>
 
-                <div class="orari">
-                    <h4><i class="fa-regular fa-clock"></i> &nbsp;Orari di apertura</h4>
-                    <div class="orario-riga"><span>Lunedì – Venerdì</span><span>8:00 – 19:00</span></div>
-                    <div class="orario-riga"><span>Sabato</span><span>8:00 – 13:00</span></div>
-                    <div class="orario-riga"><span>Domenica</span><span>Chiuso</span></div>
+                <div class="orari-box">
+                    <h4><i class="fa-regular fa-clock"></i> Orari di apertura</h4>
+                    <div class="orario-row"><span>Lunedì – Venerdì</span><span>8:00 – 19:00</span></div>
+                    <div class="orario-row"><span>Sabato</span><span>8:00 – 13:00</span></div>
+                    <div class="orario-row chiuso"><span>Domenica</span><span>Chiuso</span></div>
                 </div>
-
             </div>
 
         </div>
-
-    </section>
+    </div>
+</section>
 
 </main>
 
@@ -206,12 +258,16 @@
      FOOTER
      ======================== -->
 <footer>
-
-    <div class="footer-wrap">
+    <div class="footer-inner">
 
         <div class="footer-brand">
-            <h3>Studio RC</h3>
-            <p>Fisioterapia e riabilitazione a Chioggia. Il tuo benessere è la nostra priorità.</p>
+            <p class="logo">Studio <span>RC</span></p>
+            <p>Fisioterapia e riabilitazione a Mestre.<br>Il tuo benessere è la nostra priorità.</p>
+            <div class="footer-social">
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
         </div>
 
         <div class="footer-col">
@@ -224,7 +280,7 @@
 
         <div class="footer-col">
             <h4>Contatti</h4>
-            <p>Via Roma 12<br>30015 Chioggia (VE)</p>
+            <p>Via Roma 12, 30170 Mestre (VE)</p>
             <p>+39 041 000 0000</p>
             <p>info@studiorc.it</p>
         </div>
@@ -232,10 +288,12 @@
     </div>
 
     <div class="footer-bottom">
-        <span>© 2025 Studio RC — Tutti i diritti riservati</span>
-        <span>P.IVA 00000000000</span>
+        <span>© 2025 Studio RC di Marco Rossi — P.IVA 00000000000</span>
+        <div>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Cookie Policy</a>
+        </div>
     </div>
-
 </footer>
 
 <script src="indexScript.js"></script>
