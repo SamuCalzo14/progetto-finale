@@ -240,30 +240,6 @@ nav a:hover {
     transition: background 0.3s, color 0.3s;
 }
 
-/* Bottone piccolo per la sezione fisioterapista */
-.btn-piccolo {
-    display: flex;
-    margin-top: 28px;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 18px;
-    background-color: transparent;
-    color: #4caf72;
-    font-family: 'Outfit', sans-serif;
-    font-weight: 600;
-    font-size: 13px;
-    text-decoration: none;
-    border-radius: 10px;
-    border: 1px solid #4caf72;
-    transition: background 0.3s, color 0.3s;
-    width: fit-content;
-}
-
-.btn-piccolo:hover {
-    background-color: #4caf72;
-    color: #1a3328;
-}
-
 .btn-bordo:hover {
     background-color: rgba(168, 213, 181, 0.08);
     color: #ffffff;
@@ -352,19 +328,6 @@ nav a:hover {
     box-shadow: 0 20px 48px rgba(26, 51, 40, 0.12);
 }
 
-/* Il div colorato con l'icona (sostituire con <img>) */
-.card-immagine {
-    width: 100%;
-    height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 45px;
-    color: rgba(255, 255, 255, 0.6);
-}
-
-/* Stile per la vera immagine quando la metti:
-   <img src="..." class="card-img"> */
 .card-img {
     width: 100%;
     height: 200px;
@@ -422,8 +385,6 @@ nav a:hover {
     color: rgba(26, 51, 40, 0.35);
 }
 
-/* Stile per la vera foto quando la metti:
-   <img src="images/dottore.jpg" alt="Dott. Marco Rossi" class="fisio-foto-reale"> */
 .fisio-foto-reale {
     width: 100%;
     height: 420px;
@@ -651,7 +612,7 @@ footer {
     color: #a8d5b5;
     font-size: 14px;
     text-decoration: none;
-    transition: background 0.3s, color 0.3s;
+    transition: 0.5s;
 }
 
 .footer-social a:hover {
