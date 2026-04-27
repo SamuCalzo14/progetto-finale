@@ -133,6 +133,11 @@ nav a:hover {
     padding: 60px 56px;
 }
 
+.auth-sinistra-top {
+    justify-content: flex-start;
+    padding-top: 80px;
+}
+
 .auth-sinistra-etichetta {
     font-size: 12px;
     font-weight: 600;

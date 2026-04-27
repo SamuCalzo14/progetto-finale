@@ -108,7 +108,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <div class="auth-pagina">
 
     <!-- SINISTRA verde -->
-    <div class="auth-sinistra">
+    <div class="auth-sinistra auth-sinistra-top">
         <p class="auth-sinistra-etichetta">· Studio RC · Fisioterapia ·</p>
         <h2>Inizia il tuo<br><span>percorso.</span></h2>
         <p>Crea il tuo account e prenota la tua prima visita in pochi minuti.</p>
